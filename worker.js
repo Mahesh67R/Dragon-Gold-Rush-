@@ -42,10 +42,10 @@ export default {
     .btn-cyan { background: linear-gradient(135deg, #10b981, #059669); color: #000; }
     .btn-outline { background: #1e293b; color: var(--text); border: 1px solid var(--border); }
     .btn:disabled { opacity: 0.5; }
-    .wheel-wrap { position: relative; width: 240px; height: 240px; margin: 20px auto; }
-    .wheel { width: 100%; height: 100%; border-radius: 50%; border: 6px solid var(--accent); background: conic-gradient(#f59e0b 0deg 60deg, #1e293b 60deg 120deg, #10b981 120deg 180deg, #1e293b 180deg 240deg, #f59e0b 240deg 300deg, #1e293b 300deg 360deg); transition: transform 3.5s cubic-bezier(0.17, 0.67, 0.12, 0.99); display: flex; align-items: center; justify-content: center; }
-    .wheel-center { width: 64px; height: 64px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 26px; }
-    .wheel-pointer { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); font-size: 24px; z-index: 5; }
+    .wheel-wrap { position: relative; width: 220px; height: 220px; margin: 15px auto; }
+    .wheel { width: 100%; height: 100%; border-radius: 50%; border: 5px solid var(--accent); background: #f59e0b; background-image: conic-gradient(#f59e0b 0deg 60deg, #10b981 60deg 120deg, #3b82f6 120deg 180deg, #8b5cf6 180deg 240deg, #ec4899 240deg 300deg, #ef4444 300deg 360deg); transition: transform 3.5s cubic-bezier(0.17, 0.67, 0.12, 0.99); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(245,158,11,0.3); }
+    .wheel-center { width: 55px; height: 55px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; }
+    .wheel-pointer { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); font-size: 22px; z-index: 5; text-shadow: 0 2px 5px rgba(0,0,0,0.8); }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
     .list-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px; }
     .input { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: #0f172a; color: #fff; margin-bottom: 10px; font-size: 14px; }
@@ -100,7 +100,7 @@ export default {
   <div id="view-earn" class="view">
     <div class="card-box" style="text-align:center;">
       <div class="card-head" style="justify-content:center;">🎰 Lucky Dragon Spin Wheel</div>
-      <div class="wheel-wrap"><div class="wheel-pointer">🔻</div><div class="wheel" id="wheelEl"><div class="wheel-center">🐉</div></div></div>
+      <div class="wheel-wrap"><div class="wheel-pointer">▼</div><div class="wheel" id="wheelEl"><div class="wheel-center">🐉</div></div></div>
       <p style="font-size:12px; color:var(--muted); margin-bottom:12px;">Watch 1 short ad to spin and win between 10 and 100 Gold!</p>
       <button class="btn btn-gold" id="spinBtn" onclick="spinWheelWithAd()">🎲 Watch Ad & Spin Now</button>
     </div>
@@ -134,7 +134,7 @@ export default {
       <div style="font-size:38px; margin-bottom:8px;">🤝</div>
       <h3 style="margin-bottom:6px;">Invite Friends & Earn</h3>
       <p style="font-size:12px; color:var(--muted); margin-bottom:16px;">Earn +100 Gold & 10% bonus commission when your friends join via your personal link!</p>
-      <input type="text" class="input" id="refLinkInput" readonly value="https://t.me/DragonGoldRush_bot/play?startapp=ref_player" />
+      <input type="text" class="input" id="refLinkInput" readonly value="https://t.me/DragonGoldRush_bot/play" />
       <div class="grid-2">
         <button class="btn btn-gold" onclick="copyRefLink()">📋 Copy Link</button>
         <button class="btn btn-cyan" onclick="shareRefLink()">📤 Share on TG</button>
