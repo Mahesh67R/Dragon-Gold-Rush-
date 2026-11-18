@@ -70,10 +70,9 @@ export default {
     </div>
     <div class="sync-badge" id="syncStatus">Cloud Synced</div>
   </div>
-  <div class="balance-card">
+    <div class="balance-card">
     <div class="bal-label">Total Dragon Gold</div>
     <div class="bal-val">🪙 <span id="coinBal">100</span></div>
-    <div class="bal-usd">≈ $<span id="usdBal">0.0100</span> USDT</div>
     <div class="stats-row">
       <div class="stat-item">Per Tap<span id="tapStat">+2</span></div>
       <div class="stat-item">Farm Level<span id="farmLvlStat">Lvl 1</span></div>
